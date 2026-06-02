@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Hero Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px;
+    background:#f5f7fa;
+    gap:40px;
+}
+
+.content{
+    flex:1;
+}
+
+.content h1{
+    font-size:3rem;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.content p{
+    font-size:1.1rem;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#007bff;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#0056b3;
+}
+
+.image{
+    flex:1;
+    text-align:center;
+}
+
+.image img{
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .content h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <div class="content">
+        <h1>Learn Web Development</h1>
+        <p>
+            Start your journey in HTML, CSS, and JavaScript.
+            Build responsive websites and modern web applications.
+        </p>
+
+        <a href="#" class="btn">Get Started</a>
+    </div>
+
+    <div class="image">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Web Development">
+    </div>
+
+</section>
+
+</body>
+</html>
