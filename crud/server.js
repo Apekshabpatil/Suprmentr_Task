@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/crudlab");
+mongoose.connect("mongodb+srv://apekshapatil947_db_user:S1zXxYli7l3bmfZ8@cluster0.x78u1hg.mongodb.net/?appName=Cluster0");
 
 const UserSchema = new mongoose.Schema({
   name: String
@@ -36,4 +36,6 @@ app.delete("/users/:id", async (req, res) => {
   res.json({ message: "Deleted" });
 });
 
-app.listen(5000);
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
